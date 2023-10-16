@@ -1,11 +1,11 @@
-import { IPlugin } from "subjektify";
-import { myBuildPlugin } from "./plugins";
+import { Context, IPlugin } from "subjektify";
+import { buildFunction } from "./plugins";
 
-const plugins = (): IPlugin[] => [
-    {
-        target: "build",
-        apply: myBuildPlugin
-    }
-]
-
-export default plugins;
+export const plugins = (): IPlugin[] => {
+    return [
+        {
+            target: () => "build",
+            apply: (context: Context) => buildFunction(context)
+        }
+    ];
+}

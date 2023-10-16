@@ -1,5 +1,5 @@
 {
-    "namespace": "plugin-template",
+    "namespace": "subjektify-typescript",
     "version": "0.0.1",
     "license": "MIT",
     "plugin": true

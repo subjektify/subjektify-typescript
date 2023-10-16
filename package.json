@@ -1,13 +1,17 @@
 {
-  "name": "plugin-template",
+  "name": "subjektify-typescript",
   "version": "0.0.1",
   "description": "The plugin-template repository is a template for creating new Subjektify plugins, providing a starting point for defining custom functionality to be used in the development of decentralized applications.",
   "author": "subjektify",
   "license": "MIT",
   "main": "dist/index",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && npm run compile",
     "clean": "rimraf dist",
+    "compile": "tsc",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -17,7 +21,7 @@
     "plugin"
   ],
   "dependencies": {
-    "subjektify": "file:../subjektify"
+    "subjektify": "^0.0.3"
   },
   "devDependencies": {
     "@types/node": "^20.8.6",
