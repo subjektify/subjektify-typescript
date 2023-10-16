@@ -1,0 +1,6 @@
+{
+    "namespace": "plugin-template",
+    "version": "0.0.1",
+    "license": "MIT",
+    "plugin": true
+}
