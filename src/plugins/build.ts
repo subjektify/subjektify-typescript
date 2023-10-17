@@ -9,7 +9,8 @@ export default class BuildPlugin implements IPlugin {
         return "build";
     }
 
-    public apply(context: Context): Promise<void> {
+    public run(context: Context): Promise<void> {
+        console.log("Build plugin running...");
         console.log(context);
         return Promise.resolve();
     }
