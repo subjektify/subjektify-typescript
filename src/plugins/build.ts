@@ -1,16 +1,13 @@
-import { CommandTarget, Context, IPlugin } from "subjektify";
+import { BuildContext, IPlugin } from 'subjektify';
 
-export default class BuildPlugin implements IPlugin {
+export class BuildPlugin implements IPlugin {
 
-    constructor() {
-    }
-    
-    public target(): CommandTarget {
+    target(): string {
         return "build";
     }
-
-    public run(context: Context): Promise<void> {
-        console.log("Build plugin running...");
+    
+    run(context: BuildContext): Promise<void> {
+        console.log("[TYPESCRIPT] BuildPlugin.run");
         console.log(context);
         return Promise.resolve();
     }

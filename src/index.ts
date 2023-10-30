@@ -1,5 +1,5 @@
 import { IPlugin } from "subjektify";
-import BuildPlugin from "./plugins/build";
+import { BuildPlugin } from "./plugins";
 
 export const plugins = (): IPlugin[] => {
     return [

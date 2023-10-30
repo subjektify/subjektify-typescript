@@ -1,6 +1,10 @@
 {
-    "namespace": "subjektify-typescript",
+    "namespace": "typescript",
     "version": "0.0.1",
     "license": "MIT",
-    "plugin": true
+    "author": "subjektify-dev",
+    "plugin": true,
+    "files": [
+        "dist"
+    ]
 }
