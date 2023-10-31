@@ -1,40 +1,59 @@
-# subjektify-typescript
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-The `plugin-template` repository is a template for creating new Subjektify plugins, providing a starting point for defining custom functionality to be used in the development of decentralized applications.
+# Subjektify TypeScript Plugin
 
 ## Overview
 
-This template serves as a boilerplate to kickstart the development of plugins for Subjektify. It includes the essential files and directory structure, along with example code to guide you through the process of creating a fully functional plugin.
+The Subjektify TypeScript Plugin is designed to streamline your decentralized application development workflow by automating several crucial steps. This plugin is particularly useful for TypeScript-based projects, as it generates TypeScript classes for your smart contracts, compiles the client, and updates the contract addresses upon deployment.
 
 ## Features
 
-- Pre-configured TypeScript environment
-- Example plugin code demonstrating best practices
-- Unit tests setup with Jest
-- Linting with ESLint and Prettier
+- **TypeScript Class Generation**: Automatically generates TypeScript classes for your smart contracts.
+- **Client Compilation**: Compiles the TypeScript client code.
+- **Contract Address Update**: Updates the addresses of deployed contracts in your TypeScript files.
 
-## Prerequisites
+## Installation
 
-- Node.js v14.x or higher
-- npm v6.x or higher
+Subjektify TypeScript Plugin is a native plugin, You just need to have subjektify installed:
 
-## Getting Started
+```bash
+npm install subjektify
+```
 
+## Configuration
 
-## Deployment
+Open your `subjektify.json` and modify it as follows:
 
-For local plugins, you can simply import them into your Subjektify project. For external plugins, you'll need to register them at `plugins.subjektify.dev`.
+```json
+{
+    "namespace": "your-namespace",
+    // ... existing configuration
+    "plugins": [
+        {
+            "name": "typescript"
+        }
+    ],
+    // ... existing configuration
+};
+```
+
+## Usage
+
+Once the plugin is installed and configured, you can run the build command to execute its functionalities:
+
+```bash
+subjektify build
+```
+
+Upon running this command, the plugin will:
+
+1. Generate TypeScript client for your smart contracts and place them in the `.subjektify/client` directory.
+2. Compile the TypeScript client code.
+3. Update the contract addresses in your TypeScript files, based on the latest deployment.
+
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, questions, or feature requests, please open an issue on our [GitHub repository](https://github.com/subjektify/plugin-template/issues).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
 ---
 
-Developed with :heart: by the Subjektify Team.
+Developed with ❤️ by the Subjektify Team.

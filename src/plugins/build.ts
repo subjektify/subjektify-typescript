@@ -8,7 +8,6 @@ export class BuildPlugin implements IPlugin {
     
     run(context: BuildContext): Promise<void> {
         console.log("[TYPESCRIPT] BuildPlugin.run");
-        console.log(context);
         return Promise.resolve();
     }
 }
