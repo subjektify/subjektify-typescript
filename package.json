@@ -1,36 +1,25 @@
 {
-  "name": "@subjektify-dev/typescript",
-  "version": "0.0.1",
-  "description": "Subjektify's typescript plugin to be used with the subjektify cli",
-  "main": "dist/index",
-  "author": "subjektify-dev",
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "name": "@subjektifylabs/subjektify-typescript",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rimraf dist",
-    "compile": "tsc",
-    "lint": "eslint .",
-    "patch": "npm version patch && npm publish",
-    "prepublishOnly": "npm run build",
-    "test": "jest"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "dapp",
-    "subjektify",
-    "plugin"
-  ],
+  "dependencies": {
+    "@wagmi/connectors": "latest",
+    "@wagmi/core": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "viem": "latest"
+  },
   "devDependencies": {
-    "@types/node": "^20.8.6",
-    "eslint": "^8.51.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "jest": "^29.7.0",
-    "prettier": "^3.0.3",
-    "rimraf": "^5.0.5",
-    "subjektify": "^0.0.5",
-    "typescript": "^5.2.2"
-  }
+    "@wagmi/cli": "latest",
+    "buffer": "^6.0.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "packageManager": "pnpm@9.1.4+sha512.9df9cf27c91715646c7d675d1c9c8e41f6fce88246f1318c1aa6a1ed1aeb3c4f032fcdf4ba63cc69c4fe6d634279176b5358727d8f2cc1e65b65f43ce2f8bfb0"
 }
